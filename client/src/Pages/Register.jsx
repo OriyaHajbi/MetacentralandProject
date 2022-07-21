@@ -34,7 +34,7 @@ function Register(){
 
     async function sendUserData(){
 
-    const URL = 'http://localhost:4000/users/register';
+    const URL = 'https://metacentralanserver.herokuapp.com/users/register';
 
   
     axios.post(URL, {

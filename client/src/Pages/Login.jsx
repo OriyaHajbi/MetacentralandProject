@@ -35,7 +35,7 @@ function Login(){
   
   async function sendUserData(){
    
-    const URL = 'http://localhost:4000/users/login';
+    const URL = 'https://metacentralanserver.herokuapp.com/users/login';
 
   
     axios.post(URL, {
@@ -44,14 +44,9 @@ function Login(){
     })
     .then((res) => {
       if (res.data){
-        // console.log(res.data);
-        // console.log(localStorage.getItem("userMail"));
-        // localStorage.removeItem("userMail");
-        // localStorage.removeItem("userBalance");
         localStorage.setItem("userMail",JSON.stringify(res.data.username));
         localStorage.setItem("userBalance",JSON.stringify(res.data.balance));
-        // console.log("after");        
-        // console.log(localStorage.getItem("userMail"));
+
 
         setUser({username: "",password: ""});
         handleClick("/main");
@@ -61,7 +56,7 @@ function Login(){
         handleClick("/login");
         setUser({username: "",password: ""});
       }
-    });
+    }).catch(err => {alert("User didnt exist")});
 
   
   }

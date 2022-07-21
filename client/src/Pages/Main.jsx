@@ -44,7 +44,7 @@ function Main(){
       const params = {
         username: userMail,
       }
-      const URL = 'http://localhost:4000/users/user';
+      const URL = 'https://metacentralanserver.herokuapp.com/users/user';
       axios.get(URL , {params: params})
       .then((res) => {
         if (res.data){
@@ -61,7 +61,7 @@ function Main(){
     } , [isDataLoad]);
 
     function getLandsFromDB(){
-      const URL = 'http://localhost:4000/lands/lands';
+      const URL = 'https://metacentralanserver.herokuapp.com/lands/lands';
       axios.get(URL)
       .then((res) => {
         if (res.data){
@@ -107,7 +107,7 @@ function Main(){
         col: col,
         row: row
       }
-      const URL = 'http://localhost:4000/lands/land';
+      const URL = 'https://metacentralanserver.herokuapp.com/lands/land';
       axios.get(URL , {params: params})
       .then((res) => {
         if (res){

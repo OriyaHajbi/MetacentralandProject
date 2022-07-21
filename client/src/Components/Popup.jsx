@@ -44,7 +44,7 @@ function Popup(props){
         isForSale: newIsForSale === "Yes"
       }
       console.log(params);
-      const URL = 'http://localhost:4000/lands/updateland';
+      const URL = 'https://metacentralanserver.herokuapp.com/lands/updateland';
       axios.patch(URL , params)
       .then((res) => {
         if (res){
@@ -77,7 +77,7 @@ function Popup(props){
         landId: props.land.id,
         oldOwnerId: props.land.ownerId
       }
-      const URL = 'http://localhost:4000/lands/buyland';
+      const URL = 'https://metacentralanserver.herokuapp.com/lands/buyland';
       axios.patch(URL , params)
       .then((res) => {
         if (res.data){
