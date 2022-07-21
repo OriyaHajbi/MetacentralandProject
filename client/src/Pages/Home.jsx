@@ -9,6 +9,7 @@ function Home(){
         .then((res) => res.json())
         .then((data) => setData(data.message));
     }, []);
+    
     return  <div className="container w-50 centered">
                 <div className="card">
                     <div className="card-body">

@@ -7,18 +7,18 @@ const mongoose = require("mongoose");
 const passport = require("passport");
 const cors = require("cors");
 
-const {Blockchain , Transaction} = require("../server/blockchain")
+const {Blockchain , Transaction} = require("./blockchain")
 const blockchain = new Blockchain();
 
 
-const User = require("../server/models/User");
+const User = require("./models/User");
 
 const session = require("express-session");
 
-const UserRoutes = require("../server/routers/User");
-const LandRoutes = require("../server/routers/Land");
+const UserRoutes = require("./routers/User");
+const LandRoutes = require("./routers/Land");
 
-const Land = require("../server/models/Land");
+const Land = require("./models/Land");
 const bcrypt = require("bcrypt")
 const saltRounds = 10;
 
@@ -138,10 +138,14 @@ app.get('/logout', function(req, res, next) {
 });
 
 
+
 app.get("/api", (req, res) => {
   res.json({ message: "Hello from server!" });
 });
 
+app.get("/api2", (req, res) => {
+  res.json({ message: "Hello from server2!" });
+});
 
 let port = process.env.Port;
 if (port == null || port == ""){
@@ -149,5 +153,5 @@ if (port == null || port == ""){
 }
 
 app.listen(port , function(){
-    console.log("Server has started on port ${port}");
+    console.log("Server has started on port " , port);
 })
