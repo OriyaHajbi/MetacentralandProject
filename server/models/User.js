@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 
-const findOrCreate = require("mongoose-findorcreate");
-const passportLocalMongoose = require("passport-local-mongoose");
+// const findOrCreate = require("mongoose-findorcreate");
+// const passportLocalMongoose = require("passport-local-mongoose");
 
 
 const userSchema = new mongoose.Schema({

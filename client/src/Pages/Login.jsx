@@ -1,7 +1,4 @@
 import React, { useState } from "react";
-import GoogleEntry from "../Components/GoogleEntry";
-import GoogleLogin from "react-google-login";
-import httpRequestBuilder from "../httpRequest";
 import { useNavigate } from "react-router-dom";
 const axios = require('axios').default;
 
