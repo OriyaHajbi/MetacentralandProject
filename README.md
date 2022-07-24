@@ -1,65 +1,21 @@
-<div id="top"></div>
 
-
-<!-- PROJECT LOGO -->
-<br />
-<div >
-  <a href="https://github.com/github_username/repo_name">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
-  </a>
-
-<h3>project_title</h3>
-
-  <p >
-    project_description
-    <br />
-    <a href="https://github.com/github_username/repo_name"><strong>Explore the docs »</strong></a>
-    <br />
-    <br />
-    <a href="https://github.com/github_username/repo_name">View Demo</a>
-    ·
-    <a href="https://github.com/github_username/repo_name/issues">Report Bug</a>
-    ·
-    <a href="https://github.com/github_username/repo_name/issues">Request Feature</a>
-  </p>
-</div>
+# MetaCentraland
+[Link To The Metacentraland](https://metacentralandclient.herokuapp.com/)
 
 
 
-<!-- TABLE OF CONTENTS -->
-<details>
-  <summary>Table of Contents</summary>
-  <ol>
-    <li>
-      <a href="#about-the-project">About The Project</a>
-      <ul>
-        <li><a href="#built-with">Built With</a></li>
-      </ul>
-    </li>
-    <li>
-      <a href="#getting-started">Getting Started</a>
-      <ul>
-        <li><a href="#prerequisites">Prerequisites</a></li>
-        <li><a href="#installation">Installation</a></li>
-      </ul>
-    </li>
-    <li><a href="#usage">Usage</a></li>
-    <li><a href="#roadmap">Roadmap</a></li>
-    <li><a href="#contributing">Contributing</a></li>
-    <li><a href="#license">License</a></li>
-    <li><a href="#contact">Contact</a></li>
-    <li><a href="#acknowledgments">Acknowledgments</a></li>
-  </ol>
-</details>
 
 
-
-<!-- ABOUT THE PROJECT -->
 ## About The Project
-
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
-
-Here's a blank template to get started: To avoid retyping too much info. Do a search and replace with your text editor for the following: `github_username`, `repo_name`, `twitter_handle`, `linkedin_username`, `email_client`, `email`, `project_title`, `project_description`
+Metacentraland is a map of 50*50 lands.
+Each land can be a Park, Road or NFT.
+Parks and Roads aren't for sale.
+NFT is for sale.
+Each NFT have attributes {ownerId, row, col, landId, game, cost, isForSale}.
+For see the map the user must to register and than to login.
+In the register page the user can choose if he is Seller/Buyer or Guest.
+Seller/Buyer reacive 1000$ and  they can start to buy and sell lands.
+Guest cannot buy/sell lands but he can to play in game in the land.
 
 
 
@@ -80,24 +36,28 @@ Here's a blank template to get started: To avoid retyping too much info. Do a se
    ```
 2. Install NPM server packages
    ```sh
-   npm install
+   npm install mongoose mongoose-findorcreate express express-session passport bcrypt body-parser cors crypto-js dotenv ejs elliptic
    ```
 3. Install NPM client packages
    ```sh
-   npm install
+   npm install axios mouse-wheel-zoom
    ```
 
 
 
-<!-- USAGE EXAMPLES -->
 ## Photo
+![image](https://github.com/OriyaHajbi/MetacentralandProject/blob/main/photos/homePage.jpeg?raw=true)
+![image](https://github.com/OriyaHajbi/MetacentralandProject/blob/main/photos/loginPage.jpeg?raw=true)
+![image](https://github.com/OriyaHajbi/MetacentralandProject/blob/main/photos/registerPage.jpeg?raw=true)
+![image](https://github.com/OriyaHajbi/MetacentralandProject/blob/main/photos/mainPage.jpeg?raw=true)
+![image](https://github.com/OriyaHajbi/MetacentralandProject/blob/main/photos/myland.jpeg?raw=true)
+![image](https://github.com/OriyaHajbi/MetacentralandProject/blob/main/photos/notMyLand.jpeg?raw=true)
 
 
 
 
 
 
-<!-- CONTACT -->
 ## Contact
 
 Oriya Hajbi - OriyaHajbi@gmail.com
