@@ -8,7 +8,7 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 function App(){
     return  <Router>
-                <div className="min-h-screen home">
+                <div  className="min-h-screen home">
                     <Routes>
                         <Route path="/" element={<Home/>}/>
                         <Route path="/register" element={<Register/>}/>

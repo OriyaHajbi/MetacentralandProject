@@ -3,6 +3,7 @@ import React from "react";
 
 
 function NavBar(props){
+
     return  <div>
                 <nav class="navbar">
                     <span class="navbar-brand h1 font-weight-bold font-italic">{props.userMail}</span>
@@ -13,8 +14,9 @@ function NavBar(props){
                     <span class="navbar-brand nftsale">NFT-for sale</span>
                     <span class="navbar-brand nftnotsale">NFT-not for sale</span>
                     <span class="navbar-brand nftnotsale"></span>
-                    <span class="navbar-brand">Coins: {props.userBalance} <i class="fab fa-btc"></i></span>
-                    <a href="/"><i class="fa-solid fa-arrow-right-from-bracket"></i></a>
+                    {props.isUserSeller ? <span class="navbar-brand">Coins: {props.userBalance} <i class="fab fa-btc"></i></span> :
+                     <span class="navbar-brand">Guest User <i class="fab fa-btc"></i></span>}
+                    <a id="logout" onMouseUp={() => {alert("Thank you, see you soon.")}} href="/"><i class="fa-solid fa-arrow-right-from-bracket"></i></a>
                 </nav>
             </div>
 }

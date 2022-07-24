@@ -183,7 +183,7 @@ function Main(){
     //wz.reset();
 
     return <div>
-        <NavBar userBalance={user.userBalance} userMail={user.username}/>
+        <NavBar userBalance={user.userBalance} userMail={user.username} isUserSeller={user.isSeller}/>
         {isLandNFT ? <Popup land={land} userMail={userMail} isSeller={user.isSeller}/>: ""}
         <div className="rowOfLands" id="matrix">
            {

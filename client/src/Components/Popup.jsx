@@ -122,7 +122,7 @@ function Popup(props){
                     </dl>
                     
                     
-                    {(props.isSeller && props.land.isForSale) ? 
+                    {(props.isSeller && props.land.isForSale && props.userMail !== props.land.ownerId) ? 
                     <button id="buyBTN"  type="button" class="btn btn-warning btn-lg center"   onClick={buyLand} >Buy </button>
                     : ""}
                     {props.userMail == props.land.ownerId ? 
