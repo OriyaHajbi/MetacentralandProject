@@ -39,8 +39,9 @@ router.post("/register", async (req, res) => {
     User.find({
         username: username
     }, function (err, foundUser) {
-        if (foundUser) {
-            res.send("User exist");
+        if (foundUser.length !== 0) {
+            console.log(foundUser);
+            return res.json("User exist");
         }else{
               bcrypt.hash(password, saltRounds, function (err, hash) {
                 const newUser = new User({

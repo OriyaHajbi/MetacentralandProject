@@ -44,8 +44,8 @@ function Popup(props){
         isForSale: newIsForSale === "Yes"
       }
       console.log(params);
-      // const URL = 'https://metacentralanserver.herokuapp.com/lands/updateland';// for Heroku
-      const URL = 'http://localhost:4000/lands/updateland';// for Local
+      const URL = 'https://metacentralandserver.herokuapp.com/lands/updateland';// for Heroku
+      // const URL = 'http://localhost:4000/lands/updateland';// for Local
       axios.patch(URL , params)
       .then((res) => {
         if (res){
@@ -78,8 +78,8 @@ function Popup(props){
         landId: props.land.id,
         oldOwnerId: props.land.ownerId
       }
-      // const URL = 'https://metacentralanserver.herokuapp.com/lands/buyland';// for heroku
-      const URL = 'http://localhost:4000/lands/buyland';// for Local
+      const URL = 'https://metacentralandserver.herokuapp.com/lands/buyland';// for heroku
+      // const URL = 'http://localhost:4000/lands/buyland';// for Local
       axios.patch(URL , params)
       .then((res) => {
         if (res.data){

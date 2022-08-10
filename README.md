@@ -1,6 +1,6 @@
 
 # MetaCentraland
-[Link To The Metacentraland](https://metacentralandclient.herokuapp.com/)
+[Link To The Metacentraland](https://metacentraland.herokuapp.com/)
 
 
 

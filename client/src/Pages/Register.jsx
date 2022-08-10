@@ -34,8 +34,8 @@ function Register(){
 
     async function sendUserData(){
 
-    // const URL = 'https://metacentralanserver.herokuapp.com/users/register'; // for Heroku
-    const URL = 'http://localhost:4000/users/register'; // for Local
+    const URL = 'https://metacentralandserver.herokuapp.com/users/register'; // for Heroku
+    // const URL = 'http://localhost:4000/users/register'; // for Local
 
   
     axios.post(URL, {
@@ -46,7 +46,7 @@ function Register(){
     .then((res) => {
       if (res.data){
         console.log(res.data);
-        if (res.data === "User exist"){
+        if (res.data == "User exist"){
           alert("User exist");
         }else{
           handleClick("/login");
