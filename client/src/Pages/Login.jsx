@@ -35,7 +35,8 @@ function Login(){
   
   async function sendUserData(){
    
-    const URL = 'https://metacentralanserver.herokuapp.com/users/login';
+    // const URL = 'https://metacentralanserver.herokuapp.com/users/login'; // for Heroku
+    const URL = 'http://localhost:4000/users/login'; // for Local
 
   
     axios.post(URL, {
@@ -77,11 +78,11 @@ function Login(){
           
             <div className="form-group ">
               <label for="email">Email</label>
-              <input onChange={updateUser} type="email" className="form-control" name="username" required/>
+              <input onChange={updateUser} value={user.username} type="email" className="form-control" name="username" required/>
             </div>
             <div className="form-group">
               <label for="password">Password</label>
-              <input onChange={updateUser} type="password" className="form-control" name="password" required/>
+              <input onChange={updateUser} value={user.password} type="password" className="form-control" name="password" required/>
             </div>
             <button onClick={sendUserData} className="btn btn-dark ">Login</button>
             <a href="/" className="btn btn-outline-dark left ">Back</a>

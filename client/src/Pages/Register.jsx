@@ -34,7 +34,8 @@ function Register(){
 
     async function sendUserData(){
 
-    const URL = 'https://metacentralanserver.herokuapp.com/users/register';
+    // const URL = 'https://metacentralanserver.herokuapp.com/users/register'; // for Heroku
+    const URL = 'http://localhost:4000/users/register'; // for Local
 
   
     axios.post(URL, {
@@ -44,8 +45,13 @@ function Register(){
     })
     .then((res) => {
       if (res.data){
-        console.log(res);
-        handleClick("/login");
+        console.log(res.data);
+        if (res.data === "User exist"){
+          alert("User exist");
+        }else{
+          handleClick("/login");
+        }
+
         setUser({username: "",password: "" , isSeller: false});
       }else{
         alert("The details are wrong");
@@ -71,16 +77,16 @@ function Register(){
           
             <div className="form-group">
               <label for="email">Email</label>
-              <input onChange={updateUser} type="email" className="form-control" name="username" required/>
+              <input onChange={updateUser} value={user.username} type="email" className="form-control" name="username" required/>
             </div>
             <div className="form-group ">
               <label for="password">Password</label>
-              <input onChange={updateUser} type="password" className="form-control" name="password" required/>
+              <input onChange={updateUser} value={user.password} type="password" className="form-control" name="password" required/>
             </div>
             <div>
               <form>
                 <label>You are a Seller?</label>
-                <input type="checkbox" checked={checked}  onChange={e => { if (checked !== undefined)
+                <input type="checkbox" value={user.isSeller} checked={checked}  onChange={e => { if (checked !== undefined)
                 setChecked(e.target.checked)}}   />
               </form>
             </div>

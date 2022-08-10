@@ -44,7 +44,8 @@ function Main(){
       const params = {
         username: userMail,
       }
-      const URL = 'https://metacentralanserver.herokuapp.com/users/user';
+      // const URL = 'https://metacentralanserver.herokuapp.com/users/user'; // for Heroku
+      const URL = 'http://localhost:4000/users/user'; // for Local
       axios.get(URL , {params: params})
       .then((res) => {
         if (res.data){
@@ -61,7 +62,8 @@ function Main(){
     } , [isDataLoad]);
 
     function getLandsFromDB(){
-      const URL = 'https://metacentralanserver.herokuapp.com/lands/lands';
+      // const URL = 'https://metacentralanserver.herokuapp.com/lands/lands'; // For Heroku
+      const URL = 'http://localhost:4000/lands/lands'; // For Local
       axios.get(URL)
       .then((res) => {
         if (res.data){
@@ -107,7 +109,8 @@ function Main(){
         col: col,
         row: row
       }
-      const URL = 'https://metacentralanserver.herokuapp.com/lands/land';
+      // const URL = 'https://metacentralanserver.herokuapp.com/lands/land'; // for Heroku
+      const URL = 'http://localhost:4000/lands/land'; // for Local
       axios.get(URL , {params: params})
       .then((res) => {
         if (res){
